@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JetpackCompose</string>
+    <string name="icon_cancel">Отмена</string>
+    <string name="icon_ready">Готово</string>
+    <string name="text_new_entry">Новая запись</string>
+    <string name="text_enter_entry">Введите запись</string>
+    <string name="text_save">Сохранить</string>
+</resources>
