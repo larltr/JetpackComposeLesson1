@@ -116,10 +116,10 @@ fun BoxContainer(modifier: Modifier = Modifier) {
                 .padding(16.dp)
                 .height(54.dp)
                 .fillMaxWidth()
-                .shadow(6.dp, shape = RoundedCornerShape(10.dp)),
+                .shadow(6.dp),
             onClick = { },
             shape = RoundedCornerShape(10.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(Green.value)),
+            colors = ButtonDefaults.buttonColors(containerColor = Green),
         ) {
             Text(
                 text = stringResource(R.string.text_save),
