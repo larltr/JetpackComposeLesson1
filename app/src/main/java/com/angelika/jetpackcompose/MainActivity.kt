@@ -34,6 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.angelika.jetpackcompose.ui.theme.DelaGothicOne
 import com.angelika.jetpackcompose.ui.theme.Green
 import com.angelika.jetpackcompose.ui.theme.Grey
 import com.angelika.jetpackcompose.ui.theme.JetpackComposeTheme
@@ -59,12 +60,15 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun BoxContainer(modifier: Modifier = Modifier) {
     Box(modifier = modifier) {
+        val text = remember {
+            mutableStateOf("")
+        }
         Text(
             modifier = with(Modifier) { padding(top = 16.dp, start = 16.dp) },
             text = stringResource(R.string.text_new_entry),
             fontSize = 34.sp,
             color = Color.Black,
-            fontFamily = Rubik,
+            fontFamily = DelaGothicOne,
             fontWeight = FontWeight.Bold
         )
         Icon(
@@ -85,9 +89,6 @@ fun BoxContainer(modifier: Modifier = Modifier) {
             contentDescription = stringResource(id = R.string.icon_ready)
         )
 
-        val text = remember {
-            mutableStateOf("")
-        }
         OutlinedTextField(modifier = Modifier
             .padding(top = 120.dp, start = 16.dp, end = 16.dp)
             .height(54.dp)
@@ -102,7 +103,7 @@ fun BoxContainer(modifier: Modifier = Modifier) {
                     text = stringResource(R.string.text_enter_entry),
                     fontFamily = Rubik,
                     fontWeight = FontWeight.Light,
-                    color = Color(Grey.value),
+                    color = Grey,
                     fontSize = 18.sp
                 )
             },
